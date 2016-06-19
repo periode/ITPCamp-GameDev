@@ -46,10 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraFollow.cs" />
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\AnimatedUVs.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\DemoCamera.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\FacialExpressions.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\SmallFishEmitter.cs" />
+     <Compile Include="Assets\SoundEffectManager.cs" />
      <Compile Include="Assets\SquidBehaviour.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
