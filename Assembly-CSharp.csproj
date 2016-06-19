@@ -46,13 +46,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraFollow.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
+     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
      <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\RestartManager.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\AnimatedUVs.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\DemoCamera.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\FacialExpressions.cs" />
      <Compile Include="Assets\SailCharacterPack\Scripts\SmallFishEmitter.cs" />
+     <Compile Include="Assets\SeagullMove.cs" />
      <Compile Include="Assets\SoundEffectManager.cs" />
      <Compile Include="Assets\SquidBehaviour.cs" />
+     <Compile Include="Assets\SquidGeneration.cs" />
+     <Compile Include="Assets\StartManager.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

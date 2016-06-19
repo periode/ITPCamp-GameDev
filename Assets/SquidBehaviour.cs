@@ -8,13 +8,20 @@ public class SquidBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
 		if(Random.value < 0.5f){
-			rotationSpeed = Random.Range (0.9f, 3.5f);
+			rotationSpeed = Random.Range (0.9f, 2.5f);
 		}else{
-			rotationSpeed = Random.Range (-0.9f, -3.5f);
+			rotationSpeed = Random.Range (-0.9f, -2.5f);
 		}
 
-		scaleFactor = Random.Range (0.9f, 3f);
+		if(PlayerPrefs.GetString("Mode") == "easy"){
+			scaleFactor = Random.Range (0.3f, 2f);
+		}else{
+			scaleFactor = Random.Range (0.9f, 3f);	
+		}
+
 		transform.localScale *= scaleFactor;
 	}
 	

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SoundEffectManager : MonoBehaviour {
 
@@ -9,9 +10,12 @@ public class SoundEffectManager : MonoBehaviour {
 
 	AudioSource player;
 
+	GameManager gm;
+
 	// Use this for initialization
 	void Start () {
 		player = GetComponent<AudioSource> ();
+		gm = GameObject.Find ("GameManager").GetComponent<GameManager> ();
 	}
 	
 	// Update is called once per frame
@@ -33,8 +37,15 @@ public class SoundEffectManager : MonoBehaviour {
 			}
 
 			player.Play ();
+
+
+			gm.score++;
+			gm.scoreText.text = "times hit by squids: " + gm.score;
 		}
+	}
 
 
+	void OnTriggerEnter(Collider col){
+		SceneManager.LoadScene ("Victory");
 	}
 }
