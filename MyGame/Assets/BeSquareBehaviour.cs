@@ -38,6 +38,8 @@ public class BeSquareBehaviour : MonoBehaviour {
 
 		if(other.gameObject.tag == "Dancer"){
 			other.gameObject.GetComponent<MeshRenderer> ().material.color = Color.red;
+			other.gameObject.GetComponent<AudioSource> ().pitch = Random.Range (0.8f, 1.2f);
+			other.gameObject.GetComponent<AudioSource> ().Play ();
 		}
 
 	}
