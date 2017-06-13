@@ -38,6 +38,13 @@ public class BeSquareBehaviour : MonoBehaviour {
 		if(Input.GetKey(KeyCode.D)){
 			this.transform.Translate (Vector3.right * movementSpeed);
 		}
+
+		if(GameObject.Find("Speaker").GetComponent<AudioSource>().isPlaying){
+			//the song is playing, try to survive!
+		}else{
+			//the song has finished playing
+			SceneManager.LoadScene("Victory");
+		}
 	}
 
 	void OnCollisionEnter(Collision other){
