@@ -46,8 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MyBehaviour.cs" />
-     <Compile Include="Assets\MyClickBehaviour.cs" />
+     <Compile Include="Assets\BeSquareBehaviour.cs" />
+     <Compile Include="Assets\DancerBehaviour.cs" />
+     <Compile Include="Assets\LightBehaviour.cs" />
+     <Compile Include="Assets\RestartBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
