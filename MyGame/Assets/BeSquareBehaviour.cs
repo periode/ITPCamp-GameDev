@@ -33,4 +33,8 @@ public class BeSquareBehaviour : MonoBehaviour {
 			this.transform.Translate (Vector3.right * movementSpeed);
 		}
 	}
+
+	void OnCollisionEnter(Collision other){
+		other.gameObject.GetComponent<MeshRenderer> ().material.color = Color.red;
+	}
 }
