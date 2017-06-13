@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BeSquareBehaviour : MonoBehaviour {
 
 	public float movementSpeed = 0.5f;
 
+	public Text score;
+
+	int totalUndisturbedDancers = 10;
+
 	// Use this for initialization
 	void Start () {
-		
+		score.text = "undisturbed dancers: " + totalUndisturbedDancers;
 	}
 	
 	// Update is called once per frame
@@ -38,8 +44,16 @@ public class BeSquareBehaviour : MonoBehaviour {
 
 		if(other.gameObject.tag == "Dancer"){
 			other.gameObject.GetComponent<MeshRenderer> ().material.color = Color.red;
-			other.gameObject.GetComponent<AudioSource> ().pitch = Random.Range (0.8f, 1.2f);
+			other.gameObject.GetComponent<AudioSource> ().pitch = Random.Range (0.6f, 1.4f);
 			other.gameObject.GetComponent<AudioSource> ().Play ();
+
+			//update the interface
+			totalUndisturbedDancers -= 1;
+			score.text = "undisturbed dancers: " + totalUndisturbedDancers;
+
+			if(totalUndisturbedDancers == 0){
+				SceneManager.LoadScene ("Restart");
+			}
 		}
 
 	}
