@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BeSquareBehaviour : MonoBehaviour {
 
-	float movementSpeed = 0.5f;
+	public float movementSpeed = 0.5f;
 
 	// Use this for initialization
 	void Start () {
