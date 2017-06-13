@@ -35,6 +35,10 @@ public class BeSquareBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision other){
-		other.gameObject.GetComponent<MeshRenderer> ().material.color = Color.red;
+
+		if(other.gameObject.tag == "Dancer"){
+			other.gameObject.GetComponent<MeshRenderer> ().material.color = Color.red;
+		}
+
 	}
 }
